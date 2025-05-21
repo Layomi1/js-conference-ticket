@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <figure class="attachment_1">
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="squiggly-line"
+      />
+    </figure>
+
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="logo" />
+      <article class="hidden">
+        <h2>Your Journey to Coding Conf 2025 Starts Here</h2>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </article>
+    </header>
+    <section class="content">
+      <main class="register hidden">
+        <form action="">
+          <label for="image"
+            >Upload Avatar
+            <article class="upload">
+              <figure>
+                <img
+                  src="./assets//images//icon-upload.svg"
+                  alt="icon-upload"
+                />
+                <figcaption>Drag and Drrop or Click here</figcaption>
+              </figure>
+
+              <input type="file" name="image" id="image" class="file" />
+            </article>
+            <small>
+              <img src="./assets/images/icon-info.svg" alt="info icon" /> upload
+              Upload your photo (JPG or PNG, max size: 500KB)</small
+            >
+          </label>
+          <label for="name">
+            Full Name
+            <input type="tel" name="name" id="name" />
+          </label>
+          <label for="email">
+            Email
+            <input
+              type="tel"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
+          </label>
+          <label for="address">
+            GitHub Username
+            <input
+              type="tel"
+              name="address"
+              id="address"
+              placeholder=" @yourusername"
+            />
+          </label>
+          <button type="submit" class="btn">Generated tickets starts</button>
+        </form>
+      </main>
+      <!-- Generated tickets starts -->
+
+      <article class="ticket">
+        <header>
+          <article>
+            <h2>
+              Congrats, <span id="firstName"> Full </span
+              ><span id="lastName">Name</span> ! Your ticket is ready.
+            </h2>
+            <p>
+              We've emailed your ticket to
+              <span id="email">email</span>
+              and will send updates in the run up to the event. Coding Conf
+              Austin, TX
+            </p>
+          </article>
+        </header>
+        <main class="info">
+          <figure class="ticket-container">
+            <img src="./assets//images/pattern-ticket.svg" alt="" />
+          </figure>
+          <article class="details">
+            <figure class="details-top">
+              <img src="./assets/images/logo-full.svg" alt="logo" />
+              <figcaption>Jan 31, 2025 / Austin, TX</figcaption>
+            </figure>
+            <figure id="details-bottom">
+              <img
+                src="./assets/images/image-avatar.jpg"
+                alt="user"
+                class="avatar"
+              />
+              <figcaption>
+                <p id="name">My name</p>
+                <small class="username">
+                  <img
+                    src="./assets/images/icon-github.svg"
+                    alt="github logo"
+                  />
+                  <span id="userId">my darress</span>
+                </small>
+              </figcaption>
+            </figure>
+          </article>
+
+          <p id="randomId">#01609</p>
+        </main>
+      </article>
+      <!-- Generated tickets ends -->
+    </section>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

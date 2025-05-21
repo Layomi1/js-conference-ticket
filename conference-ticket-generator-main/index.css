@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neutral-one: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+
+  --gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: var(--neutral-one);
+  font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  background: url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("./assets/images/background-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0% 100%, -100% 65%;
+  background-size: 60%, cover;
+  padding: 20px 30px;
+}
+
+.attachment_1 img {
+  position: absolute;
+  top: 4%;
+  right: 0%;
+  width: 40%;
+}
+header {
+  text-align: center;
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+  max-width: 310px;
+}
+
+header h2 {
+  font-size: 2rem;
+
+  text-align: center;
+  margin: 0 auto;
+}
+header p {
+  margin-top: 10px;
+  color: var(--neutral-500);
+}
+
+.upload {
+  /* margin-top: 10px; */
+  border: 1px dashed #fff;
+  display: grid;
+  text-align: center;
+  place-content: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.file {
+  display: none;
+}
+label {
+  font-size: 20px;
+}
+.hidden {
+  display: none;
+}
+.ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket header span {
+  color: var(--orange-500);
+}
+#firstName {
+  color: var(--gradient-text);
+}
+#lastName {
+  color: var(--gradient-text);
+}
+.ticket-container {
+  position: relative;
+}
+
+.ticket-container img {
+  width: 100%;
+}
+.details {
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.details-top img {
+  width: 100%;
+}
+.details-top figcaption {
+  margin: 3px 0 0 20px;
+  color: var(--neutral-500);
+  text-wrap: nowrap;
+}
+#details-bottom {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+#details-bottom .avatar {
+  width: 40%;
+  border-radius: 12px;
+}
+#details-bottom .username {
+  display: flex;
+  align-items: center;
+}
+#details-bottom .username img {
+  width: 100%;
+}
+.ticket #name {
+  color: var(--neutral-300);
+}
+#userId,
+#randomId {
+  color: var(--neutral-500);
+}
+#randomId {
+  position: absolute;
+  right: 9%;
+  top: 52%;
+  transform: rotate(90deg);
+}
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("./assets/images/pattern-squiggly-line-bottom-desktop.svg")
+        no-repeat,
+      url("./assets/images/background-desktop.png");
+    background-position: -10% 100%, 80%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40%, cover;
+
+    padding: 50px;
+    width: 100%;
+  }
+
+  .attachment_1 img {
+    top: 12%;
+    right: 0%;
+    width: 30%;
+  }
+  header {
+    max-width: 840px;
+    align-items: center;
+
+    margin-bottom: 80px;
+  }
+  .ticket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h2 {
+    margin: 30px 0 20px 0;
+    font-size: 5rem;
+    max-width: 840px;
+    text-align: center;
+  }
+  .ticket header p {
+    font-size: 2rem;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .ticket .info {
+    display: grid;
+    width: 100%;
+  }
+  .ticket-container {
+    width: 90%;
+    position: relative;
+  }
+
+  .details {
+    top: 60%;
+    left: 24%;
+  }
+  .details-top img {
+    width: 100%;
+  }
+  .details-top figcaption {
+    margin-left: 80px;
+    font-size: 2rem;
+  }
+  #details-bottom {
+    margin-top: 60px;
+    gap: 15px;
+    font-size: 2.8rem;
+  }
+
+  #details-bottom .avatar {
+    width: 28%;
+  }
+  #details-bottom .username {
+    gap: 12px;
+  }
+  #details-bottom .username img {
+    width: 100%;
+  }
+  #randomId {
+    right: 29%;
+    top: 70%;
+    font-size: 1.8rem;
+  }
+
+  .attribution {
+    font-size: 1rem;
+  }
+}
