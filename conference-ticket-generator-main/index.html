@@ -10,7 +10,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 
     <title>Frontend Mentor | Conference ticket generator</title>
   </head>
@@ -22,109 +22,111 @@
       />
     </figure>
 
-    <header>
-      <img src="./assets/images/logo-full.svg" alt="logo" />
-      <article class="hidden">
+    <header class="header">
+      <figure><img src="./assets/images/logo-full.svg" alt="logo" /></figure>
+
+      <article>
         <h2>Your Journey to Coding Conf 2025 Starts Here</h2>
         <p>Secure your spot at next year's biggest coding conference.</p>
       </article>
     </header>
-    <section class="content">
-      <main class="register hidden">
-        <form action="">
-          <label for="image"
-            >Upload Avatar
-            <article class="upload">
-              <figure>
-                <img
-                  src="./assets//images//icon-upload.svg"
-                  alt="icon-upload"
-                />
-                <figcaption>Drag and Drrop or Click here</figcaption>
-              </figure>
 
-              <input type="file" name="image" id="image" class="file" />
-            </article>
-            <small>
-              <img src="./assets/images/icon-info.svg" alt="info icon" /> upload
-              Upload your photo (JPG or PNG, max size: 500KB)</small
-            >
-          </label>
-          <label for="name">
-            Full Name
-            <input type="tel" name="name" id="name" />
-          </label>
-          <label for="email">
-            Email
-            <input
-              type="tel"
-              name="email"
-              id="email"
-              placeholder="example@email.com"
-            />
-          </label>
-          <label for="address">
-            GitHub Username
-            <input
-              type="tel"
-              name="address"
-              id="address"
-              placeholder=" @yourusername"
-            />
-          </label>
-          <button type="submit" class="btn">Generated tickets starts</button>
-        </form>
-      </main>
-      <!-- Generated tickets starts -->
-
-      <article class="ticket">
-        <header>
-          <article>
-            <h2>
-              Congrats, <span id="firstName"> Full </span
-              ><span id="lastName">Name</span> ! Your ticket is ready.
-            </h2>
-            <p>
-              We've emailed your ticket to
-              <span id="email">email</span>
-              and will send updates in the run up to the event. Coding Conf
-              Austin, TX
-            </p>
-          </article>
-        </header>
-        <main class="info">
-          <figure class="ticket-container">
-            <img src="./assets//images/pattern-ticket.svg" alt="" />
-          </figure>
-          <article class="details">
-            <figure class="details-top">
-              <img src="./assets/images/logo-full.svg" alt="logo" />
-              <figcaption>Jan 31, 2025 / Austin, TX</figcaption>
+    <main class="register">
+      <form action="" method="POST">
+        <label for="image" class="image"
+          >Upload Avatar
+          <article class="upload">
+            <figure class="field">
+              <img src="./assets//images/icon-upload.svg" alt="icon-upload" />
+              <figcaption>Drag and Drrop or Click here</figcaption>
             </figure>
-            <figure id="details-bottom">
-              <img
-                src="./assets/images/image-avatar.jpg"
-                alt="user"
-                class="avatar"
-              />
+            <figure class="user-upload hidden">
+              <img src="./assets//images/image-avatar.jpg" alt="user" />
               <figcaption>
-                <p id="name">My name</p>
-                <small class="username">
-                  <img
-                    src="./assets/images/icon-github.svg"
-                    alt="github logo"
-                  />
-                  <span id="userId">my darress</span>
-                </small>
+                <button class="remove">Remnove Image</button>
+                <button class="change">Change Image</button>
               </figcaption>
             </figure>
-          </article>
 
-          <p id="randomId">#01609</p>
-        </main>
-      </article>
-      <!-- Generated tickets ends -->
-    </section>
+            <input
+              type="file"
+              name="image"
+              id="image"
+              class="file"
+              aria-describedby="image"
+            />
+          </article>
+          <small class="proper">
+            <img
+              src="./assets/images/icon-info.svg"
+              alt="info icon"
+              sizes="500"
+            />
+            upload Upload your photo (JPG or PNG, max size: 500KB)</small
+          >
+        </label>
+        <small class="error image-error hidden">
+          <img src="./assets/images/icon-info.svg" alt="info icon" id="alert" />
+          File size to large .Please Upload a photo under 500kB.
+        </small>
+
+        <label for="name">
+          Full Name
+          <input
+            type="tel"
+            name="name"
+            id="name"
+            aria-labelledby="name"
+            aria-describedby="full Name"
+            aria-required="true"
+          />
+        </label>
+        <small class="error name-error hidden">
+          <img
+            src="./assets/images/icon-info.svg"
+            alt="info icon"
+            id="alert"
+          />Enter your nFull Name.
+        </small>
+
+        <label for="email">
+          Email
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@email.com"
+            aria-label="email"
+            aria-describedby="email"
+            aria-required="true"
+          />
+        </label>
+        <small class="error email-error hidden">
+          <img src="./assets/images/icon-info.svg" alt="info icon" id="alert" />
+          Please enter a Valid email.
+        </small>
+
+        <label for="address">
+          GitHub Username
+          <input
+            type="tel"
+            name="address"
+            id="address"
+            placeholder="@yourusername"
+            aria-describedby="github address"
+            aria-required="true"
+          />
+        </label>
+        <small class="error github-error hidden">
+          <img src="./assets/images/icon-info.svg" alt="info icon" id="alert" />
+          Please enter a Github address.
+        </small>
+
+        <button type="submit" aria-label="button" class="btn">
+          Generated tickets starts
+        </button>
+      </form>
+    </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

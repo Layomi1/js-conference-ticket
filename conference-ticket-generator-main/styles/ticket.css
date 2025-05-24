@@ -16,23 +16,29 @@
 
   --gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
 }
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./assets/fonts/static/Inconsolata-Bold.ttf") format("ttf"),
+    url("./assets/fonts/static/Inconsolata-ExtraBold.ttf") format("ttf"),
+    url("./assets/fonts/static/Inconsolata-Medium.ttf") format("ttf"),
+    url("./assets/fonts/static/Inconsolata-Regular.ttf") format("ttf");
+}
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   color: var(--neutral-one);
-  font-family: sans-serif;
+  font-family: "Inconsolata", sans-serif;
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
 
-  background: url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
-    url("./assets/images/background-mobile.png");
+  background: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("../assets/images/background-mobile.png");
   background-repeat: no-repeat, no-repeat;
   background-position: 0% 100%, -100% 65%;
-  background-size: 60%, cover;
-  padding: 20px 30px;
+  background-size: 80%, cover;
+  padding: 10px 40px;
 }
 
 .attachment_1 img {
@@ -44,40 +50,26 @@ body {
 header {
   text-align: center;
   display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+  max-width: 310px;
   gap: 30px;
   margin-bottom: 30px;
-  max-width: 310px;
 }
 
-header h2 {
-  font-size: 2rem;
+header p {
+  margin-top: 8px;
+  color: var(--neutral-500);
+  margin-top: 10px;
+  text-align: center;
+}
 
+.ticket header h2 {
+  font-size: 2rem;
   text-align: center;
   margin: 0 auto;
 }
-header p {
-  margin-top: 10px;
-  color: var(--neutral-500);
-}
 
-.upload {
-  /* margin-top: 10px; */
-  border: 1px dashed #fff;
-  display: grid;
-  text-align: center;
-  place-content: center;
-  padding: 10px 20px;
-  border-radius: 12px;
-}
-.file {
-  display: none;
-}
-label {
-  font-size: 20px;
-}
-.hidden {
-  display: none;
-}
 .ticket {
   display: flex;
   flex-direction: column;
@@ -103,7 +95,7 @@ label {
   width: 30%;
   position: absolute;
   top: 45%;
-  left: 12%;
+  left: 14%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -160,15 +152,14 @@ label {
 
 @media screen and (min-width: 768px) {
   body {
-    background: url("./assets/images/pattern-squiggly-line-bottom-desktop.svg")
+    background: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg")
         no-repeat,
-      url("./assets/images/background-desktop.png");
-    background-position: -10% 100%, 80%;
+      url("../assets/images/background-desktop.png");
+    background-position: 0% 100%, 80%;
     background-repeat: no-repeat, no-repeat;
-    background-size: 40%, cover;
-
+    background-size: 50%, cover;
     padding: 50px;
-    width: 100%;
+    height: 100vh;
   }
 
   .attachment_1 img {
@@ -176,12 +167,30 @@ label {
     right: 0%;
     width: 30%;
   }
+
   header {
     max-width: 840px;
     align-items: center;
-
     margin-bottom: 80px;
+    text-align: center;
   }
+
+  header h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-size: 5rem;
+    max-width: 840px;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   .ticket {
     width: 100%;
     display: flex;
@@ -189,30 +198,25 @@ label {
     align-items: center;
   }
 
-  header h2 {
+  .ticket header h2 {
     margin: 30px 0 20px 0;
     font-size: 5rem;
     max-width: 840px;
     text-align: center;
   }
-  .ticket header p {
-    font-size: 2rem;
-    max-width: 500px;
-    text-align: center;
-    margin: 0 auto;
-  }
+
   .ticket .info {
     display: grid;
-    width: 100%;
+    width: 55%;
   }
   .ticket-container {
-    width: 90%;
+    width: 100%;
     position: relative;
   }
 
-  .details {
-    top: 60%;
-    left: 24%;
+  .info .details {
+    top: 52%;
+    left: 27%;
   }
   .details-top img {
     width: 100%;
@@ -237,8 +241,8 @@ label {
     width: 100%;
   }
   #randomId {
-    right: 29%;
-    top: 70%;
+    right: 26%;
+    top: 63%;
     font-size: 1.8rem;
   }
 

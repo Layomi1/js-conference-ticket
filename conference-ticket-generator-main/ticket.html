@@ -3,17 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/ticket.css" />
     <title>Ticket</title>
   </head>
   <body>
-    <header>
-      <figure class="attachment_1">
-        <img
-          src="./assets/images/pattern-squiggly-line-top.svg"
-          alt="squiggly-line"
-        />
-      </figure>
-    </header>
+    <figure class="attachment_1">
+      <img
+        src="./assets/images/pattern-squiggly-line-top.svg"
+        alt="squiggly-line"
+      />
+    </figure>
+    <article class="ticket">
+      <header>
+        <figure><img src="./assets/images/logo-full.svg" alt="logo" /></figure>
+        <article>
+          <h2>
+            Congrats, <span id="firstName"> Full </span
+            ><span id="lastName">Name</span> ! Your ticket is ready.
+          </h2>
+          <p>
+            We've emailed your ticket to
+            <span id="email">email</span>
+            and will send updates in the run up to the event.
+          </p>
+        </article>
+      </header>
+      <main class="info">
+        <figure class="ticket-container">
+          <img src="./assets//images/pattern-ticket.svg" alt="" />
+        </figure>
+        <article class="details">
+          <figure class="details-top">
+            <img src="./assets/images/logo-full.svg" alt="logo" />
+            <figcaption>Jan 31, 2025 / Austin, TX</figcaption>
+          </figure>
+          <figure id="details-bottom">
+            <img
+              src="./assets/images/image-avatar.jpg"
+              alt="user"
+              class="avatar"
+            />
+            <figcaption>
+              <p id="name">My name</p>
+              <small class="username">
+                <img src="./assets/images/icon-github.svg" alt="github logo" />
+                <span id="userId">my darress</span>
+              </small>
+            </figcaption>
+          </figure>
+        </article>
+
+        <p id="randomId">#01609</p>
+      </main>
+    </article>
   </body>
 </html>
